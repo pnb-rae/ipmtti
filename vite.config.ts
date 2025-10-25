@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./", // ✅ Added for cPanel (relative paths)
+  base: "/", // Use absolute base so assets resolve on deep routes in Vercel
   server: {
     host: "::",
     port: 8080,
