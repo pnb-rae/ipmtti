@@ -1,0 +1,226 @@
+import { useState } from "react";
+import { Menu, X, Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, MessageCircle, Music } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import schoolLogo from "@/assets/school-logo.png";
+
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const courses = [
+    { name: "Driving & Plant Operation", href: "/schools/driving-plant-operation" },
+    { name: "Engineering (Mechanics, Welding)", href: "/schools/engineering" },
+    { name: "Fashion & Design", href: "/schools/fashion-design" },
+    { name: "ICT & Computing", href: "/schools/computing" },
+    { name: "Hospitality", href: "/schools/hospitality" },
+  ];
+
+  return (
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-sm border-b border-border">
+      {/* Top Bar */}
+      <div className="bg-primary text-primary-foreground py-2 px-4">
+        <div className="container mx-auto flex flex-wrap justify-between items-center text-sm">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
+              <a href="tel:+254725782912" className="hover:text-accent transition-colors">+254 725 782 912</a>
+              <span className="text-accent">/</span>
+              <a href="tel:" className="hover:text-accent transition-colors"></a>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
+              <a href="mailto:international.machinery.inst@gmail.com" className="hover:text-accent transition-colors">international.machinery.inst@gmail.com</a>
+            </div>
+            <div className="hidden md:flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <a href="https://maps.app.goo.gl/cYaBmcMoaRATm7Pg8" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Happy Valley, Thika</a>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <span className="text-accent font-semibold">📅 Next Intake: January 2026</span>
+            <div className="hidden lg:flex items-center space-x-2">
+              <a href="https://www.instagram.com/ipmtti/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="IPMTTI Instagram" className="text-primary-foreground hover:text-accent transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href="https://web.facebook.com/p/International-Plant-Machinery-Training-Institute-100064092097753/?_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" aria-label="IPMTTI Facebook" className="text-primary-foreground hover:text-accent transition-colors">
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a href="https://www.tiktok.com/@ipmtti?_t=ZM-8zpKqX2kRP2&_r=1" target="_blank" rel="noopener noreferrer" aria-label="IPMTTI TikTok" className="text-primary-foreground hover:text-accent transition-colors">
+                <Music className="w-4 h-4" />
+              </a>
+              <a href="https://wa.me/254725782912" target="_blank" rel="noopener noreferrer" aria-label="IPMTTI WhatsApp" className="text-primary-foreground hover:text-accent transition-colors">
+                <MessageCircle className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <a href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <img 
+              src={schoolLogo} 
+              alt="IPMTTI - International Plant Machinery Training Technical Institute" 
+              className="w-16 h-16 md:w-20 md:h-20 object-contain"
+            />
+            <div>
+              <h1 className="text-xl font-bold text-primary">IPMTTI</h1>
+              <p className="text-xs text-muted-foreground">Technical Excellence</p>
+            </div>
+          </a>
+
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  href="/" 
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  Home
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  href="/about" 
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  About Us
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="h-10">Schools & Programs</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[600px] gap-3 p-6">
+                    <NavigationMenuLink
+                      href="/schools"
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground border-b border-border mb-2"
+                    >
+                      <div className="text-sm font-medium leading-none">View All Schools</div>
+                      <p className="text-xs text-muted-foreground">Explore our comprehensive programs</p>
+                    </NavigationMenuLink>
+                    {courses.map((course) => (
+                      <NavigationMenuLink
+                        key={course.name}
+                        href={course.href}
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">{course.name}</div>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <button 
+                  onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  Admissions
+                </button>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  href="/gallery" 
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  Gallery
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  href="/contact" 
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  Contact
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Button variant="outline" size="sm" asChild>
+              <a href="/downloads/ipmtti-brochure.pdf" download>Download Brochure</a>
+            </Button>
+            <Button className="btn-hero w-full md:w-auto group" size="lg">
+              Apply Now
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-border">
+            <div className="flex flex-col space-y-2 pt-4">
+              <a href="/" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Home</a>
+              <a href="/about" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">About Us</a>
+              <div className="px-4 py-2">
+                <details className="group">
+                  <summary className="flex items-center justify-between cursor-pointer text-sm font-medium">
+                    Schools & Programs
+                    <ChevronDown className="w-4 h-4 group-open:rotate-180 transition-transform" />
+                  </summary>
+                  <div className="mt-2 pl-4 space-y-2">
+                    <a
+                      href="/schools"
+                      className="block py-1 text-sm text-primary hover:text-primary/80 font-medium"
+                    >
+                      View All Schools
+                    </a>
+                    {courses.map((course) => (
+                      <a
+                        key={course.name}
+                        href={course.href}
+                        className="block py-1 text-sm text-muted-foreground hover:text-foreground"
+                      >
+                        {course.name}
+                      </a>
+                    ))}
+                  </div>
+                </details>
+              </div>
+              <button onClick={() => document.getElementById('admissions')?.scrollIntoView({ behavior: 'smooth' })} className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md text-left w-full">Admissions</button>
+              <a href="/gallery" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Gallery</a>
+              <a href="/contact" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Contact</a>
+              <div className="px-4 pt-4 space-y-2">
+                <Button variant="outline" size="sm" className="w-full" asChild>
+                  <a href="/downloads/ipmtti-brochure.pdf" download>Download Brochure</a>
+                </Button>
+                <Button variant="hero" className="w-full">
+                  Apply Now
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

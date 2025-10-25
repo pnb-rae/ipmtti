@@ -1,0 +1,181 @@
+const SchemaMarkup = () => {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "International Plant Machinery Technical Training Institute",
+    "alternateName": "IPMTTI",
+    "description": "Premier technical training institute in Kenya offering practical skills in driving, heavy plant operation, engineering, fashion, ICT, and hospitality.",
+    "url": "https://ipmtti.ac.ke",
+    "logo": "https://ipmtti.ac.ke/logo.png",
+    "image": "https://ipmtti.ac.ke/og-image.png",
+    "telephone": "+254700123456",
+    "email": "info@ipmtti.ac.ke",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Blue Post Mall, 3rd Floor",
+      "addressLocality": "Thika",
+      "addressRegion": "Kiambu County",
+      "addressCountry": "Kenya"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-1.0332",
+      "longitude": "37.0694"
+    },
+    "foundingDate": "1998",
+    "numberOfStudents": "500+",
+    "accreditedBy": [
+      {
+        "@type": "Organization",
+        "name": "National Industrial Training Authority (NITA)"
+      },
+      {
+        "@type": "Organization", 
+        "name": "Ministry of Education, Kenya"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "NITA Certificate",
+        "credentialCategory": "certificate"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/ipmtti",
+      "https://www.instagram.com/ipmtti"
+    ]
+  };
+
+  const coursesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "IPMTTI Training Programs",
+    "description": "Technical and vocational courses offered by IPMTTI",
+    "itemListElement": [
+      {
+        "@type": "Course",
+        "name": "Heavy Plant Operation Training",
+        "description": "Comprehensive training in operating heavy machinery including excavators, bulldozers, cranes, and more.",
+        "provider": {
+          "@type": "Organization",
+          "name": "IPMTTI"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "P3M",
+        "occupationalCategory": "Heavy Equipment Operator",
+        "educationalCredentialAwarded": "Certificate in Heavy Plant Operation"
+      },
+      {
+        "@type": "Course",
+        "name": "Automotive Mechanics",
+        "description": "Professional training in automotive repair, maintenance, and diagnostics.",
+        "provider": {
+          "@type": "Organization",
+          "name": "IPMTTI"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "P6M",
+        "occupationalCategory": "Automotive Technician",
+        "educationalCredentialAwarded": "Certificate in Automotive Mechanics"
+      },
+      {
+        "@type": "Course",
+        "name": "Fashion Design & Tailoring",
+        "description": "Creative training in fashion design, pattern making, and professional tailoring.",
+        "provider": {
+          "@type": "Organization",
+          "name": "IPMTTI"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "P6M",
+        "occupationalCategory": "Fashion Designer",
+        "educationalCredentialAwarded": "Certificate in Fashion Design"
+      },
+      {
+        "@type": "Course",
+        "name": "ICT & Computing",
+        "description": "Essential computer skills and technology training for the digital workplace.",
+        "provider": {
+          "@type": "Organization",
+          "name": "IPMTTI"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "P4M",
+        "occupationalCategory": "Computer Technician",
+        "educationalCredentialAwarded": "Certificate in ICT"
+      },
+      {
+        "@type": "Course",
+        "name": "Hospitality Management",
+        "description": "Professional training in food production, catering, and hotel operations.",
+        "provider": {
+          "@type": "Organization",
+          "name": "IPMTTI"
+        },
+        "courseMode": "onsite",
+        "timeRequired": "P8M",
+        "occupationalCategory": "Hotel Manager",
+        "educationalCredentialAwarded": "Certificate in Hospitality"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What courses does IPMTTI offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IPMTTI offers comprehensive technical training in Heavy Plant Operation, Automotive Mechanics, Fashion Design, ICT & Computing, Hospitality Management, Welding, Plumbing, and Electrical Systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long are the courses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Course duration varies from 3-12 months depending on the program. Short courses like driving take 3 months, while comprehensive programs like hospitality can take up to 12 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are IPMTTI certificates recognized?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, IPMTTI is accredited by NITA (National Industrial Training Authority) and the Ministry of Education. Our certificates are recognized industry-wide in Kenya and East Africa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the job placement rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IPMTTI has a 98% job placement rate. We have strong industry partnerships and provide job placement support to all graduates."
+        }
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </>
+  );
+};
+
+export default SchemaMarkup;

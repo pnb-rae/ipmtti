@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(var(--primary), 0.3); }
+  50% { box-shadow: 0 0 30px rgba(var(--primary), 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* IPMTTI Design System - Professional Technical Training Institute */
+
+@layer base {
+  :root {
+    /* IPMTTI Brand Colors - Navy Blue Base with Orange/Yellow Accents */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Navy Blue Primary - Professional & Trustworthy */
+    --primary: 215 84% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 215 70% 30%;
+    --primary-dark: 215 90% 15%;
+
+    /* Yellow Accent - Innovation & Technical Excellence (Primary Highlight) */
+    --accent: 45 93% 58%;
+    --accent-foreground: 215 28% 17%;
+    --accent-light: 45 93% 68%;
+    --accent-dark: 45 93% 48%;
+
+    /* Orange Secondary - Energy & Technical Balance */
+    --secondary: 28 88% 55%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 28 88% 65%;
+    --secondary-dark: 28 88% 45%;
+
+    /* Gray Neutrals for Balance */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 84% 20%;
+
+    --radius: 0.75rem;
+
+    /* Custom IPMTTI Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)), hsl(var(--accent-dark)));
+    --gradient-overlay: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.95));
+    
+    /* Shadows with Brand Colors */
+    --shadow-brand: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-accent: 0 8px 25px -8px hsl(var(--accent) / 0.4);
+    --shadow-elegant: 0 20px 60px -10px hsl(var(--primary) / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 28% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 28% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 28% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 28 88% 55%;
+    --primary-foreground: 215 28% 12%;
+
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 215 28% 12%;
+
+    --muted: 215 28% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 28 88% 55%;
+    --accent-foreground: 215 28% 12%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 28% 20%;
+    --input: 215 28% 20%;
+    --ring: 28 88% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  /* IPMTTI Custom Component Classes */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .brand-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-brand {
+    box-shadow: var(--shadow-brand);
+  }
+  
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Course Card Hover Effects with Animation */
+  .course-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-smooth hover:shadow-brand hover:-translate-y-2 opacity-0 animate-fade-in;
+  }
+  
+  .course-card:nth-child(1) { animation-delay: 0.1s; animation-fill-mode: forwards; }
+  .course-card:nth-child(2) { animation-delay: 0.2s; animation-fill-mode: forwards; }
+  .course-card:nth-child(3) { animation-delay: 0.3s; animation-fill-mode: forwards; }
+  .course-card:nth-child(4) { animation-delay: 0.4s; animation-fill-mode: forwards; }
+  .course-card:nth-child(5) { animation-delay: 0.5s; animation-fill-mode: forwards; }
+  .course-card:nth-child(6) { animation-delay: 0.6s; animation-fill-mode: forwards; }
+
+  /* CTA Button Styles */
+  .btn-hero {
+    @apply bg-accent text-accent-foreground hover:bg-accent-dark font-semibold py-4 px-8 rounded-lg transition-smooth shadow-accent hover:shadow-lg hover:scale-105;
+  }
+  
+  .btn-outline-hero {
+    @apply border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded-lg transition-smooth hover:scale-105;
+  }
+
+  /* Professional Badges */
+  .trust-badge {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-center transition-smooth hover:bg-white/20;
+  }
+
+  /* Section Headers */
+  .section-header {
+    @apply text-center mb-16;
+  }
+  
+  .section-title {
+    @apply text-4xl lg:text-5xl font-bold mb-6 font-poppins bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Performance Optimizations for Mobile */
+  @media (max-width: 768px) {
+    /* Simplify animations on mobile */
+    * {
+      animation-duration: 0.3s !important;
+    }
+    
+    /* Keep float animation at normal speed */
+    .animate-float {
+      animation-duration: 3s !important;
+    }
+    
+    /* Reduce transform complexity */
+    .hover\:scale-105:hover,
+    .group:hover .group-hover\:scale-110,
+    .hover-scale:hover {
+      transform: scale(1.02) !important;
+    }
+    
+    /* Optimize shadow rendering */
+    .shadow-brand,
+    .shadow-accent,
+    .shadow-elegant {
+      box-shadow: 0 4px 12px -4px hsl(var(--primary) / 0.15) !important;
+    }
+  }
+
+  /* GPU acceleration for better performance */
+  .animate-fade-in,
+  .animate-scroll,
+  .trust-badge,
+  .course-card {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Image loading optimizations */
+  img {
+    content-visibility: auto;
+    contain: layout style paint;
+  }
+  
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+  
+  img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+  
+  /* Shimmer loading effect for images */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .image-loading {
+    background: linear-gradient(90deg, 
+      hsl(var(--muted)) 25%, 
+      hsl(var(--muted) / 0.5) 50%, 
+      hsl(var(--muted)) 75%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Count-up animation for stats */
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal,
+    .animate-fade-in,
+    .animate-scale-in {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+}

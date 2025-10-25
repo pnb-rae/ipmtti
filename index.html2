@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPMTTI - International Plant Machinery & Technical Training Institute | Kenya</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Premier technical training institute in Thika, Kenya. Learn driving, heavy plant operation, mechanics, welding, plumbing, fashion design, and ICT. NITA, NTSA, and KNEC accredited courses with 98% job placement rate."
+    />
+    <meta
+      name="keywords"
+      content="technical training Kenya, vocational college Thika, driving school Kenya, heavy plant operator training, mechanics course Kenya, welding training, plumbing course, fashion design school, ICT training, IPMTTI, NITA certified courses, NTSA approved, KNEC exams, technical institute Kiambu"
+    />
+    <meta name="author" content="International Plant Machinery & Technical Training Institute" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="IPMTTI - International Plant Machinery & Technical Training Institute" />
+    <meta
+      property="og:description"
+      content="Premier technical training institute in Thika, Kenya offering practical skills in driving, heavy plant operation, engineering, fashion, and ICT. Accredited by NITA, NTSA, and KNEC with 98% job placement."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ipmtti.co.ke" />
+    <meta property="og:image" content="https://ipmtti.co.ke/og-image.png" />
+    <meta property="og:site_name" content="IPMTTI" />
+    <meta property="og:locale" content="en_KE" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IPMTTI - Technical Training Excellence" />
+    <meta
+      name="twitter:description"
+      content="Transform your career with hands-on technical training at Kenya's premier vocational institute. Accredited by NITA, NTSA, and KNEC."
+    />
+    <meta name="twitter:image" content="https://ipmtti.co.ke/og-image.png" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ipmtti.co.ke" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "International Plant Machinery & Technical Training Institute",
+        "url": "https://ipmtti.co.ke",
+        "logo": "https://ipmtti.co.ke/og-image.png",
+        "sameAs": [
+          "https://www.facebook.com/ipmtti",
+          "https://www.instagram.com/ipmtti"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+254-715-016300",
+          "contactType": "information",
+          "areaServed": "KE"
+        }],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Thika",
+          "addressRegion": "Kiambu",
+          "addressCountry": "KE"
+        },
+        "accreditation": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "NITA Accreditation",
+            "description": "Accredited by the National Industrial Training Authority (NITA) for technical and vocational training programs."
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "NTSA Accreditation",
+            "description": "Approved by the National Transport and Safety Authority (NTSA) for driving and heavy plant operator training."
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "KNEC Certification",
+            "description": "Programs examined and certified by the Kenya National Examinations Council (KNEC)."
+          }
+        ]
+      }
+    </script>
+
+    <!-- Theme & Icons -->
+    <meta name="theme-color" content="#0b5fff" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

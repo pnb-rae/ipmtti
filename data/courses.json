@@ -1,0 +1,250 @@
+{
+  "School of Hospitality": [
+    {
+      "title": "Food and Beverage",
+      "duration": "3 Terms",
+      "level": "Artisan",
+      "min_grade": "D- & Below",
+      "cert": "KNEC"
+    },
+    {
+      "title": "Food & Beverage",
+      "duration": "6 Terms",
+      "level": "Certificate",
+      "min_grade": "D",
+      "cert": "KNEC"
+    },
+    {
+      "title": "Food and Beverage",
+      "duration": "9 Terms",
+      "level": "Diploma",
+      "min_grade": "C-",
+      "cert": "KNEC"
+    },
+    {
+      "title": "Pastry and Bakery",
+      "duration": "2 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Basic Cookery",
+      "duration": "2 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Cake Baking & Decoration",
+      "duration": "1 Month",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    }
+  ],
+  "School of Fashion and Design": [
+    {
+      "title": "Fashion & Design",
+      "duration": "9 Terms",
+      "level": "Diploma",
+      "min_grade": "C-",
+      "cert": "KNEC/CDACC"
+    },
+    {
+      "title": "Fashion & Design",
+      "duration": "6 Terms",
+      "level": "Certificate",
+      "min_grade": "D",
+      "cert": "KNEC/CDACC"
+    },
+    {
+      "title": "Fashion & Design",
+      "duration": "3 Terms",
+      "level": "Artisan",
+      "min_grade": "D-",
+      "cert": "KNEC/CDACC"
+    },
+    {
+      "title": "Fashion & Design I, II & III",
+      "duration": "5 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Dressmaking/Tailoring",
+      "duration": "3 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    }
+  ],
+  "School of Computing & Informatics": [
+    {
+      "title": "Information Communication Technology",
+      "duration": "6 Terms",
+      "level": "Craft",
+      "min_grade": "D",
+      "cert": "KNEC/CDACC"
+    },
+    {
+      "title": "Computer Programming",
+      "duration": "6 Months",
+      "level": "Short course",
+      "min_grade": "D+",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Web Design",
+      "duration": "3 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Computer Packages",
+      "duration": "6 Weeks",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    }
+  ],
+  "School of Engineering": [
+    {
+      "title": "Plumbing Grade III, II, I",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Construction Plant Mechanic",
+      "duration": "3 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Electrical Wireman III, II & I",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Electrical Installation",
+      "duration": "6 Terms",
+      "level": "Artisan",
+      "min_grade": "D- & Below",
+      "cert": "NITA"
+    },
+    {
+      "title": "Masonry III, II & I",
+      "duration": "6 Terms",
+      "level": "Artisan",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Carpentry & Joinery I, II, III",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Painting",
+      "duration": "3 Months",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Welding and Fabrication I, II, III",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Motor Vehicle Electrician (MVE) I, II, III",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    },
+    {
+      "title": "Motor Vehicle Mechanic (MVM)",
+      "duration": "6 Terms",
+      "level": "Grade",
+      "min_grade": "Open",
+      "cert": "NITA"
+    }
+  ],
+  "School of Cosmetology": [
+    {
+      "title": "Hairdressing & Beauty Therapy",
+      "duration": "6 Terms",
+      "level": "Certificate",
+      "min_grade": "KCPE",
+      "cert": "NITA"
+    },
+    {
+      "title": "Nail Technology",
+      "duration": "3 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Hairdressing",
+      "duration": "3 Terms",
+      "level": "Certificate",
+      "min_grade": "KCPE",
+      "cert": "NITA"
+    },
+    {
+      "title": "Beauty Therapy",
+      "duration": "3 Terms",
+      "level": "Certificate",
+      "min_grade": "KCPE",
+      "cert": "NITA"
+    },
+    {
+      "title": "Weaving and Braiding",
+      "duration": "3 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Barbering",
+      "duration": "2 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Dreadlocks",
+      "duration": "2 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Body Massage",
+      "duration": "1 Month",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    },
+    {
+      "title": "Spur Management",
+      "duration": "3 Months",
+      "level": "Short course",
+      "min_grade": "Open",
+      "cert": "INTERNAL"
+    }
+  ]
+}

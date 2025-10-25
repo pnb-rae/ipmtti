@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPMTTI - International Plant Machinery Technical Training Institute | Kenya</title>
+    <meta name="description" content="Premier technical training institute in Thika, Kenya. Learn driving, heavy plant operation, mechanics, welding, plumbing, fashion design, ICT, and hospitality. Accredited courses with hands-on training." />
+    <meta name="keywords" content="technical training, vocational college, driving school, heavy plant operator, mechanics, welding, plumbing, fashion design, ICT training, hospitality, Thika Kenya" />
+    <meta name="author" content="IPMTTI" />
+
+    <meta property="og:title" content="IPMTTI - International Plant Machinery Technical Training Institute" />
+    <meta property="og:description" content="Premier technical training institute in Thika, Kenya offering practical skills in driving, heavy plant operation, engineering, fashion, ICT, and hospitality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ipmtti.ac.ke" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IPMTTI - Technical Training Excellence" />
+    <meta name="twitter:description" content="Transform your career with hands-on technical training at Kenya's premier vocational institute." />
+    <meta name="twitter:image" content="/og-image.png" />
+    
+    <link rel="canonical" href="https://ipmtti.ac.ke" />
+  </head>
+
+  <body>
+
+<!-- Graduation marquee added by assistant -->
+<div id="graduation-marquee" class="graduation-marquee" aria-live="polite">
+  <div class="marquee-inner" tabindex="0">
+    🎓 Graduation Ceremony – December 2025 🎓 Join us in celebrating our graduates’ success!
+  </div>
+</div>
+<style>
+.graduation-marquee{overflow:hidden;white-space:nowrap;border-top:1px solid rgba(0,0,0,0.05);border-bottom:1px solid rgba(0,0,0,0.05);background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.06));padding:8px 0;}
+.marquee-inner{display:inline-block;padding-left:100%;animation:marquee 18s linear infinite;}
+.marquee-inner:hover, .marquee-inner:focus{animation-play-state:paused;}
+@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-100%)}}
+</style>
+<script>
+(function(){
+  // alternate directions every iteration
+  const el = document.querySelector('.marquee-inner');
+  if(!el) return;
+  let dir = 1;
+  el.addEventListener('animationiteration', ()=> {
+    dir *= -1;
+    el.style.animationDirection = dir===1 ? 'normal' : 'reverse';
+  });
+  // pause on touchstart
+  el.addEventListener('touchstart', ()=> el.style.animationPlayState='paused');
+  el.addEventListener('touchend', ()=> el.style.animationPlayState='running');
+})();
+</script>
+<!-- end marquee -->
+>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

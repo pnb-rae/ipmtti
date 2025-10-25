@@ -1,0 +1,291 @@
+import { Button } from "@/components/ui/button";
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Facebook, 
+  Instagram, 
+  MessageCircle,
+  Download,
+  ExternalLink,
+  ArrowRight,
+  Music
+} from "lucide-react";
+import nitaLogo from "@/assets/nita-logo.png";
+import ntsaLogo from "@/assets/ntsa-logo.jpg";
+
+const Footer = () => {
+  const quickLinks = [
+    { name: "About Us", href: "/about" },
+    { name: "Admissions", href: "/admissions" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "News & Events", href: "/news" },
+    { name: "Contact", href: "/contact" },
+    { name: "Student Portal", href: "/portal" },
+  ];
+
+  const courses = [
+    { name: "Driving & Plant Operation", href: "/schools/driving" },
+    { name: "Engineering & Mechanics", href: "/schools/engineering" },
+    { name: "Fashion & Design", href: "/schools/fashion" },
+    { name: "ICT & Computing", href: "/schools/ict" },
+    { name: "Hospitality", href: "/schools/hospitality" },
+  ];
+
+  const resources = [
+    { name: "Course Brochure", href: "#", icon: Download },
+    { name: "Fee Schedule", href: "#", icon: Download },
+    { name: "Application Form", href: "#", icon: Download },
+    { name: "Student Handbook", href: "#", icon: Download },
+    { name: "Academic Calendar", href: "#", icon: ExternalLink },
+  ];
+
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
+                <span className="text-2xl font-bold text-accent-foreground">I</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">IPMTTI</h3>
+                <p className="text-sm text-primary-foreground/80">Technical Excellence</p>
+              </div>
+            </div>
+            
+            <p className="text-primary-foreground/80 leading-relaxed">
+              Leading technical training institute in Kenya, empowering students with 
+              practical skills and industry certifications. 6+ years of training excellence.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                <a 
+                  href="https://maps.app.goo.gl/cYaBmcMoaRATm7Pg8" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-accent transition-colors"
+                >
+                  Happy Valley, Thika. Off Garissa Road, Thika, Kiambu County, Kenya
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-accent" />
+                <div className="text-sm space-x-2">
+                  <a href="tel:+254725782912" className="hover:text-accent transition-colors">
+                    +254 725 782 912
+                  </a>
+                  <span className="text-primary-foreground/50">•</span>
+                  <a href="tel:" className="hover:text-accent transition-colors">
+                    
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-accent" />
+                <a href="mailto:international.machinery.inst@gmail.com" className="text-sm hover:text-accent transition-colors">
+                  international.machinery.inst@gmail.com
+                </a>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="flex space-x-3">
+              <a 
+                href="https://www.instagram.com/ipmtti/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                aria-label="IPMTTI Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://web.facebook.com/p/International-Plant-Machinery-Training-Institute-100064092097753/?_rdc=1&_rdr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                aria-label="IPMTTI Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@ipmtti?_t=ZM-8zpKqX2kRP2&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                aria-label="IPMTTI TikTok"
+              >
+                <Music className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/254725782912"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-green-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                aria-label="IPMTTI WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                    href={link.href}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Our Courses */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Our Courses</h4>
+            <ul className="space-y-3">
+              {courses.map((course) => (
+                <li key={course.name}>
+                  <a 
+                    href={course.href}
+                    className="text-primary-foreground/80 hover:text-accent transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {course.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            
+            <div className="mt-6 pt-6 border-t border-white/10">
+              <a href="/schools">
+                <Button size="sm" className="bg-accent hover:bg-accent-dark text-accent-foreground">
+                  View All Courses
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* Resources & Newsletter */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6">Resources</h4>
+            <ul className="space-y-3 mb-8">
+              {resources.map((resource) => {
+                const IconComponent = resource.icon;
+                return (
+                  <li key={resource.name}>
+                    <a 
+                      href={resource.href}
+                      className="text-primary-foreground/80 hover:text-accent transition-colors text-sm flex items-center group"
+                    >
+                      <IconComponent className="w-4 h-4 mr-2 text-accent" />
+                      {resource.name}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Newsletter Signup */}
+            <div className="bg-white/5 rounded-lg p-4">
+              <h5 className="font-semibold mb-2">Stay Updated</h5>
+              <p className="text-xs text-primary-foreground/70 mb-4">
+                Get the latest news about courses, events, and admissions.
+              </p>
+              <div className="flex">
+                <input 
+                  type="email" 
+                  placeholder="Your email"
+                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-l-md text-sm placeholder:text-primary-foreground/50"
+                />
+                <Button size="sm" className="bg-accent hover:bg-accent-dark text-accent-foreground rounded-l-none">
+                  Join
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-primary-foreground/70">
+              <p>&copy; 2025. All Rights Reserved. IPMTTI.</p>
+              <div className="flex space-x-4">
+                <a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a>
+                <a href="/terms" className="hover:text-accent transition-colors">Terms of Service</a>
+                <a href="/sitemap" className="hover:text-accent transition-colors">Sitemap</a>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-6">
+              <span className="text-sm text-primary-foreground/70">Accredited by:</span>
+              <div className="flex items-center space-x-3">
+                <a 
+                  href="https://www.nita.go.ke/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-110"
+                >
+                  <img 
+                    src={nitaLogo} 
+                    alt="NITA" 
+                    className="h-6 w-auto object-contain bg-white/90 rounded px-1"
+                  />
+                </a>
+                <a 
+                  href="https://www.ntsa.go.ke/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-110"
+                >
+                  <img 
+                    src={ntsaLogo} 
+                    alt="NTSA" 
+                    className="h-6 w-auto object-contain bg-white/90 rounded px-1"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Emergency Banner */}
+      <div className="bg-accent py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-accent-foreground">
+            <span className="font-semibold">🚨 Emergency Hotline:</span>
+            <div className="flex space-x-4">
+              <a href="tel:+254725782912" className="font-bold hover:underline">
+                +254 725 782 912
+              </a>
+              <a href="tel:" className="font-bold hover:underline">
+                
+              </a>
+            </div>
+            <span className="text-sm opacity-90">Available 24/7</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
