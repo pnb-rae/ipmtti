@@ -213,28 +213,10 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink 
-                  href="/apply" 
-                  className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${location.pathname === '/apply' ? 'underline underline-offset-4 decoration-2' : ''}`}
-                >
-                  Apply Now
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink 
                   href="/gallery" 
                   className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${location.pathname === '/gallery' ? 'underline underline-offset-4 decoration-2' : ''}`}
                 >
                   Gallery
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink 
-                  href="/contact" 
-                  className={`group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 ${location.pathname === '/contact' ? 'underline underline-offset-4 decoration-2' : ''}`}
-                >
-                  Contact
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -270,9 +252,6 @@ const Header = () => {
           <div className="hidden lg:flex items-center gap-3 md:gap-4 lg:gap-6 ml-4 md:ml-6">
             <Button variant="outline" size="sm" className="rounded-lg transition-transform hover:scale-105" asChild>
               <a href="/downloads/ipmtti-brochure.pdf" download aria-label="Download IPMTTI brochure PDF">Download Brochure</a>
-            </Button>
-            <Button className="btn-hero w-full md:w-auto group rounded-lg transition-transform hover:scale-105" size="lg" asChild>
-              <a href="/apply" aria-label="Apply to IPMTTI">Apply Now</a>
             </Button>
           </div>
 
@@ -322,7 +301,6 @@ const Header = () => {
                   </div>
                 </details>
               </div>
-              <a href="/apply" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Apply Now</a>
               <a href="/gallery" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Gallery</a>
               <a href="/contact" className="px-4 py-2 text-sm font-medium hover:bg-muted rounded-md">Contact</a>
               <div className="px-4 py-2">
@@ -350,9 +328,6 @@ const Header = () => {
               <div className="px-4 pt-4 space-y-2">
                 <Button variant="outline" size="sm" className="w-full" asChild>
                   <a href="/downloads/ipmtti-brochure.pdf" download>Download Brochure</a>
-                </Button>
-                <Button variant="hero" className="w-full">
-                  Apply Now
                 </Button>
               </div>
             </div>
